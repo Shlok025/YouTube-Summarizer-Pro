@@ -42,7 +42,7 @@ st.markdown("""
 # Load environment variables and configure
 load_dotenv()
 GOOGLE_API_KEY =st.secrets['secret_key']
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY")) #Put your Google api Key here
+genai.configure(api_key= GOOGLE_API_KEY) #Put your Google api Key here
 
 # Cache the results to avoid repeated API calls
 @st.cache_data(ttl=3600)  # Cache for 1 hour
