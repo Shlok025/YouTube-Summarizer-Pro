@@ -15,8 +15,11 @@ st.set_page_config(
 )
 
 # Load environment variables and configure
+
 load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+GOOGLE_API_KEY =st.secrets['secret_key']
+genai.configure(api_key= GOOGLE_API_KEY) #Put your Google api Key here
+
 
 @st.cache_data(ttl=3600)
 def extract_video_id(youtube_url):
