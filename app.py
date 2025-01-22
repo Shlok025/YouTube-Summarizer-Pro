@@ -135,7 +135,7 @@ def generate_gemini_content(transcript_text, prompt_template, summary_type="deta
     Generate summary using Gemini Pro with different summary types
     """
     try:
-        model = genai.GenerativeModel("gemini-1.5-pro")
+        model = genai.GenerativeModel("gemini-1.5-flash")
         
         if summary_type == "quick":
             prompt = f"""Provide a concise 2-3 sentence summary of the main points from this video transcript: {transcript_text}"""
